@@ -1,6 +1,6 @@
 // Función para cargar usuarios conectados
 function loadUsers() {
-    fetch('http://localhost:5000/users')  // Cambia esto por la URL de producción
+    fetch('https://pr2back.onrender.com/users')  // Cambia esto por la URL de producción
         .then(response => response.json())
         .then(users => {
             const userList = document.getElementById('user-list');
@@ -25,7 +25,7 @@ document.getElementById('sendFile').addEventListener('click', function() {
         const formData = new FormData();
         formData.append('file', file);
         
-        fetch('http://localhost:5000/upload', {
+        fetch('https://pr2back.onrender.com/upload', {
             method: 'POST',
             body: formData,
         })
